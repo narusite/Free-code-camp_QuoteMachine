@@ -15,18 +15,18 @@
   <body>
     
 <script>
-    $(document).ready(function() {
+  $(document).ready(function() {
     //get a first one
-    $.getJSON(" http://crossorigin.me/quotes.stormconsultancy.co.uk/random.json", function(json) {
-      $("#wherethequotegoes").html(JSON.stringify(json.quote));
-      $("#tweet").attr('href', 'https://twitter.com/intent/tweet?text=' + JSON.stringify(json.quote));
+    $.getJSON("http://crossorigin.me/http://quotes.stormconsultancy.co.uk/random.json", function(json) {
+      $("#wherethequotegoes").html(json.quote);
+      $("#tweet").attr('href', 'https://twitter.com/intent/tweet?text=' + json.quote);
     });
 
     //get a new one
     $("#getQuote").on("click", function() {
-      $.getJSON(" http://crossorigin.me/quotes.stormconsultancy.co.uk/random.json", function(json) {
-        $("#wherethequotegoes").html(JSON.stringify(json.quote));
-        $("#tweet").attr('href', 'https://twitter.com/intent/tweet?text=' + JSON.stringify(json.quote));
+      $.getJSON("http://crossorigin.me/http://quotes.stormconsultancy.co.uk/random.json", function(json) {
+        $("#wherethequotegoes").html(json.quote);
+        $("#tweet").attr('href', 'https://twitter.com/intent/tweet?text=' + json.quote);
       });
 
     });
